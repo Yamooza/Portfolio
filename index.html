@@ -10,15 +10,17 @@
             margin: 0;
             padding: 0;
             overflow: hidden; /* Prevent horizontal scrollbar */
-            animation: conveyorBelt 10s linear infinite;
+            animation: conveyorWave 10s linear infinite;
+            background-image: linear-gradient(to right, #4CAF50, #2196F3, #8BC34A, #03A9F4, #4CAF50, #2196F3, #8BC34A, #03A9F4, #4CAF50, #2196F3, #8BC34A, #03A9F4, #4CAF50);
+            background-size: 200% 100%;
         }
 
-        @keyframes conveyorBelt {
+        @keyframes conveyorWave {
             0% {
-                background-position: 0 0;
+                background-position: 0% 0;
             }
             100% {
-                background-position: 100% 0;
+                background-position: -100% 0;
             }
         }
 
