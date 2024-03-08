@@ -12,7 +12,7 @@
             overflow: hidden; /* Prevent horizontal scrollbar */
             animation: conveyorWave 10s linear infinite;
             background-image: linear-gradient(to right, #4CAF50, #2196F3, #8BC34A, #03A9F4, #4CAF50, #2196F3, #8BC34A, #03A9F4, #4CAF50, #2196F3, #8BC34A, #03A9F4, #4CAF50);
-            background-size: 200% 100%;
+            background-size: 400% 100%; /* Adjusted size to accommodate two colors at a time */
         }
 
         @keyframes conveyorWave {
@@ -20,7 +20,7 @@
                 background-position: 0% 0;
             }
             100% {
-                background-position: -100% 0;
+                background-position: -200% 0; /* Adjusted position to maintain wave effect */
             }
         }
 
