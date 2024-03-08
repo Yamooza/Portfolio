@@ -48,13 +48,18 @@
         .project p {
             margin-bottom: 10px;
         }
+        iframe {
+            width: 100%;
+            height: 500px; /* Adjust height as needed */
+            border: none;
+        }
     </style>
 </head>
 <body>
     <header>
         <h1>~Eino Valtanen~</h1>
         <button onclick="window.location.href='https://example.com/portfolio'">Portfolio</button>
-        <button onclick="window.location.href='https://example.com/about'">About me</button>
+        <button onclick="showAbout()">About me</button>
     </header>
     <div id="portfolio" class="container">
         <div class="project">
@@ -70,8 +75,14 @@
         <!-- Lisää projekteja -->
     </div>
     <div id="about" class="container" style="display:none;">
-        <h2>About me</h2>
-        <p></p>
+        <iframe src="about_me.html"></iframe>
     </div>
+
+    <script>
+        function showAbout() {
+            document.getElementById("portfolio").style.display = "none";
+            document.getElementById("about").style.display = "block";
+        }
+    </script>
 </body>
 </html>
