@@ -1,0 +1,16 @@
+.container .p2 {
+    margin-bottom: 10px;
+    font-size: 25px;
+    color: rgb(4, 31, 210);
+}
+
+.container .p3 {
+    margin-bottom: 10px;
+    color: rgb(255, 255, 255);
+    text-align: right;
+}
+.container .p4 {
+    margin-bottom: 10px;
+    color: rgb(255, 255, 255);
+    text-align: right;
+}
