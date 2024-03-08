@@ -10,24 +10,15 @@
             margin: 0;
             padding: 0;
             overflow: hidden; /* Prevent horizontal scrollbar */
-            animation: waveAnimation 10s linear infinite;
+            animation: conveyorBelt 10s linear infinite;
         }
 
-        @keyframes waveAnimation {
+        @keyframes conveyorBelt {
             0% {
-                background: linear-gradient(to right, #4CAF50, #2196F3);
-            }
-            25% {
-                background: linear-gradient(to right, #2196F3, #8BC34A);
-            }
-            50% {
-                background: linear-gradient(to right, #8BC34A, #03A9F4);
-            }
-            75% {
-                background: linear-gradient(to right, #03A9F4, #4CAF50);
+                background-position: 0 0;
             }
             100% {
-                background: linear-gradient(to right, #4CAF50, #2196F3);
+                background-position: 100% 0;
             }
         }
 
