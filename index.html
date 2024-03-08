@@ -40,6 +40,16 @@
             background-color: #fff;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
+        .start {
+            text-align: center;
+            display: block;
+        }
+        .start h2 {
+            margin-top: 0;
+        }
+        .start p {
+            margin-bottom: 10px;
+        }
         .project {
             margin-bottom: 20px;
         }
@@ -67,7 +77,13 @@
         <button onclick="showAbout()">About me</button>
         <button onclick="goToStart()">Start</button>
     </header>
-    <div id="portfolio" class="container">
+    <div id="start" class="container">
+        <div class="start">
+            <h2>Welcome to My Portfolio</h2>
+            <p>This is the start screen. You can navigate using the buttons above.</p>
+        </div>
+    </div>
+    <div id="portfolio" class="container" style="display:none;">
         <div class="project">
             <img src="kuva1.jpg" alt="Project 1">
             <h2>Project 1</h2>
@@ -87,17 +103,21 @@
 
     <script>
         function showAbout() {
+            document.getElementById("start").style.display = "none";
             document.getElementById("portfolio").style.display = "none";
             document.getElementById("about").style.display = "block";
         }
 
         function showPortfolio() {
+            document.getElementById("start").style.display = "none";
             document.getElementById("about").style.display = "none";
             document.getElementById("portfolio").style.display = "block";
         }
 
         function goToStart() {
-            window.location.href = window.location.origin + window.location.pathname;
+            document.getElementById("portfolio").style.display = "none";
+            document.getElementById("about").style.display = "none";
+            document.getElementById("start").style.display = "block";
         }
     </script>
 </body>
