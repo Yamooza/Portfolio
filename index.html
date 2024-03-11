@@ -26,12 +26,12 @@
 
         header {
             background-color: #000000;
-            color: #ffffff;
+            color: rgb(132, 29, 183);
             padding: 20px 0;
             text-align: center;
         }
         header button {
-            background-color: #fff;
+            background-color: rgb(4, 31, 210);
             color: #333;
             border: none;
             padding: 10px 20px;
@@ -50,7 +50,7 @@
             width: 80%;
             margin: 20px auto;
             padding: 20px;
-            background-color: #070707;
+            background-color: #353333;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
         .start {
@@ -59,15 +59,15 @@
         }
         .start h2 {
             margin-top: 0;
-            color: rgb(255, 255, 255)
+            color: rgb(132, 29, 183)
         }
         .start p {
             margin-bottom: 10px;
-            color: rgb(255, 255, 255)
+            color: rgb(132, 29, 183)
         }
         .project {
             margin-bottom: 20px;
-            color: rgb(255, 255, 255)
+            color: rgb(132, 29, 183)
         }
         .project img {
             max-width: 100%;
@@ -75,11 +75,11 @@
         }
         .project h2 {
             margin-top: 0;
-            color: rgb(255, 255, 255)
+            color: rgb(132, 29, 183)
         }
         .project p {
             margin-bottom: 10px;
-            color: rgb(255, 255, 255)
+            color: rgb(132, 29, 183)
         }
         .container p {
             margin-bottom: 10px;
@@ -87,7 +87,7 @@
         }
         .container h2 {
             margin-bottom: 10px;
-            color: rgb(255, 255, 255)
+            color: rgb(132, 29, 183)
         }
             .container p2 {
             margin-bottom: 10px;
@@ -98,11 +98,19 @@
             margin-bottom: 10px;
             font-size: 25px;
             text-align: -10px;
-            color: rgb(4, 31, 210)
+            color: rgb(132, 29, 183)
         }
         .container p4 {
             margin-bottom: 10px;
-            color: rgb(255, 255, 255)
+            color: rgb(132, 29, 183)
+        }
+        .container p5 {
+            margin-bottom: 10px;
+            color: rgb(120, 173, 223)
+        }
+        .container p6 {
+            margin-bottom: 10px;
+            color: rgb(4, 31, 210)
         }
         
         iframe {
@@ -118,11 +126,13 @@
         <button onclick="showPortfolio()">Portfolio</button>
         <button onclick="showAbout()">About me</button>
         <button onclick="goToStart()">Start</button>
+        <button onclick="showContact()">Contact</button>
     </header>
     <div id="start" class="container">
         <div class="start">
             <p2>Welcome to My Portfolio</p2>
-         <p>You can navigate using the buttons above. I will be updating this portfolio when i make new projects and have time to update.</p>
+            <p5>My name is Eino i'm a amateur software developer</p5>
+         <p5>You can navigate using the buttons above. I will be updating this portfolio when i make new projects and have time to update.</p5>
         </div>
     </div>
     <div id="portfolio" class="container" style="display:none;">
@@ -140,31 +150,47 @@
     </div>
     <div id="about" class="container" style="display:none;">
         <p2>About me</p2>
-        <p>So I am a first year software developer based in Finland. I am currently studying in Careeria Hevosenkengänkatu to get my degree in software developing.</p>
-        <p>I have made many projects like websites and games. I won't publish my first projects because I they were kinda bad. But I will publish my new projects when i finish them.</p>
-        <p>I mainly make 3D games but i can make 2D games too. </p>
-        <p2>Languages</p2>  <p3>Engines</p3>
-        <p>c# ~Main focus~</p> <p4>Unity 3D</p4>
-        <p>HTML ~Basics~</p> <p4>Unity 2D</p4>
+        <p5>So I am a first year software developer based in Finland. I am currently studying in Careeria Hevosenkengänkatu to get my degree in software developing.</p5>
+        <p5>I have made many projects like websites and games. I won't publish my first projects because I they were kinda bad. But I will publish my new projects when i finish them.</p5>
+        <p5>I mainly make 3D games but i can make 2D games too. <br /> </p5>
+        <p6>Languages <br /> </p6>
+        <p4>c# ~Main focus~<br /> HTML ~Basics~ <br /> </p4> 
+        <p6>Engines <br /> </p6>
+        <p4>~Unity 3D~ <br /> ~Unity 2D~</p4>
     </div>
+    <div id="Contact" class="container" style="display:none;">
+        <div class="Contact">
+            <p2>My contacts</p2>
+            <p5>Email: einovalta@gmail.com <br /> </p5>
+            <p5>Github: https://github.com/Yamooza</p5>
 
     <script>
         function showAbout() {
             document.getElementById("start").style.display = "none";
             document.getElementById("portfolio").style.display = "none";
             document.getElementById("about").style.display = "block";
+            document.getElementById("Contact").style.display = "none";
         }
 
         function showPortfolio() {
             document.getElementById("start").style.display = "none";
             document.getElementById("about").style.display = "none";
             document.getElementById("portfolio").style.display = "block";
+            document.getElementById("Contact").style.display = "none";
+        }
+
+        function showContact() {
+            document.getElementById("portfolio").style.display = "none";
+            document.getElementById("about").style.display = "none";
+            document.getElementById("start").style.display = "none";
+            document.getElementById("Contact").style.display = "block";
         }
 
         function goToStart() {
             document.getElementById("portfolio").style.display = "none";
             document.getElementById("about").style.display = "none";
             document.getElementById("start").style.display = "block";
+            document.getElementById("Contact").style.display = "none";
         }
     </script>
 </body>
